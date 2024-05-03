@@ -17,7 +17,7 @@ const SignUp = () => {
   const {loading,signup} = useSignup();
   
   const handleCheckboxChange = (gender) => {
-    setInputs({...inputs, gender})
+    setInputs({...inputs, gender});
   }
 
   const handleSubmit = async (e) =>{
@@ -88,7 +88,11 @@ const SignUp = () => {
         </Link>
 
         <div>
-          <button className='btn btn-block btn-sm border border-slate-700'> Sign Up</button>
+          <button className='btn btn-block btn-sm border border-slate-700'
+		  disabled={loading}
+		  >
+			{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
+		  </button>
         </div>
       </form>
     </div>
