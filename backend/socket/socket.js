@@ -37,6 +37,5 @@ io.on("connection", (socket) => {
 	
 	});
 });
-console.log("bimbimbap");
 
 export {app,io,server}
